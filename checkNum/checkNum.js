@@ -16,5 +16,4 @@ function checkNum(value) {
   }, 0)
   return (check % 10) == 0; //Checks modulo
 }
-console.log(checkNum('5019717010103742'));
 module.exports = checkNum;
