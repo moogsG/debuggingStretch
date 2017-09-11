@@ -1,6 +1,7 @@
 var assert = require("chai").assert;
 var checkNum = require("../checkNum/checkNum");
 var maxProfit = require('../stockMarket/stockMarket');
+var popBottles = require('../popBottles/popBottles');
 
 describe("Number", function() {
   it("should return true if number is valid", function() {
@@ -22,28 +23,47 @@ describe("Number", function() {
 describe('MaxProfit', function () {
   it('should return true', function () {
     var arr = [45, 24, 35, 31, 40, 38, 11];
-    var result = 16;
+    var result = maxProfit(arr);
     assert.equal(result, 16);
   })
   it('should return true', function () {
     var arr = [11, 24, 35, 31, 40, 38, 45];
     var result = maxProfit(arr);
-    console.log(maxProfit(arr));
     assert.equal(result, 34);
 
   })
     it('should return true', function () {
     var arr = [1, 24, 35, 21, 40, 88, 45];
     var result = maxProfit(arr);
-    console.log(maxProfit(arr));
     assert.equal(result, 87);
 
   })
       it('should return true', function () {
     var arr = [11, 10, 35, 31, 40, 38, 35];
     var result = maxProfit(arr);
-    console.log(maxProfit(arr));
     assert.equal(result, 30);
+
+  })
+})
+describe('popBottles', function () {
+  it('should return true', function () {
+    var result = popBottles(10);
+    assert.equal(result, 15);
+  })
+  it('should return true', function () {
+    var result = popBottles(20);
+    assert.equal(result, 35);
+
+  })
+    it('should return true', function () {
+    var result = popBottles(30);
+    assert.equal(result, 55);
+
+  })
+      it('should return true', function () {
+    var arr = [11, 10, 35, 31, 40, 38, 35];
+    var result = popBottles(40);
+    assert.equal(result, 75);
 
   })
 })
